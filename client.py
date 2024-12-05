@@ -62,7 +62,7 @@ class LiveTranscriber:
         
         # Run transcription
         transcription = self.transcription_pipeline(audio)
-        print(f"Transcription: {transcription["text"]}")
+        print(f"text:{transcription["text"]["text"]}")
     
     def _resample(self, audio, orig_sr, target_sr):
         """
@@ -105,7 +105,7 @@ class LiveTranscriber:
 
 def main():
     print("program start - wait till setup complete")
-    transcriber = LiveTranscriber("http://127.0.0.1:8000/ASR-in/")
+    transcriber = LiveTranscriber("http://localhost:8000/ASR-in/")
     transcriber.start_transcription()
 
 if __name__ == "__main__":
