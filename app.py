@@ -8,7 +8,7 @@ import torch
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-model_name="openai/whisper-small.en" 
+model_name="./whisper-small-en" 
 
 # Load Whisper transcription pipeline
 transcription_pipeline = pipeline(

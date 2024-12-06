@@ -62,7 +62,7 @@ class LiveTranscriber:
         
         # Run transcription
         transcription = self.transcription_pipeline(audio)
-        print(f"text:{transcription["text"]["text"]}")
+        print("transcript :"+transcription["text"]["text"])
     
     def _resample(self, audio, orig_sr, target_sr):
         """
